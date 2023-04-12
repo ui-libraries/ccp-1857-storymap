@@ -121,12 +121,12 @@
         <div><br><b>
             <h2>About This Project</h2>
           </b><span class="br"></span>
-          <h3>This map was created using <a href="https://github.com/jebowe3/CSV-2-Storymap" target="_blank">CSV-2-Storymap</a>, which takes a user input csv file and generates thematically coded markers for each entry based on the "chapter"
+          <h3>SAMPLE TEXT: This map was created using <a href="https://github.com/jebowe3/CSV-2-Storymap" target="_blank">CSV-2-Storymap</a>, which takes a user input csv file and generates thematically coded markers for each entry based on the "chapter"
             attribute in the spreadsheet. These values are then fed to the dropdown menu allowing for user filtration of the scrolling sidebar content.</h3>
           <p style="padding-bottom:0px"></p>
         </div>
         <div id="dropdown-instructions">
-          <p><b>Choose from the options in the drop-down menu to filter results by the type of entry.</b></p>
+          <p><b>Choose from the options in the drop-down menu to filter results by the type of entry. Use the scrollbar to read through the major events of each activist's life and travels. As you scroll, the map will pan and zoom to the location connected with each event in the person's life story.</b></p>
         </div>
         <form id="map_parameters" name="map_parameters" action="#" accept-charset="utf-8" class="inlineForm"><select id="chapter-select" class="div-toggle" data-target=".my-info-1"></select></form><span class='introbreak'></span>
         <div id="sidebar-info" class="my-info-1">
@@ -242,7 +242,7 @@
       });
 */
       const scrollEndHeight = 200;
-      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see the code for this map, please go to: <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>.</h3><p style='padding-bottom:" +
+      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see a basic template of the code that makes this map work, as well as how to generate a basic template for your own project, please go to: <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>.</h3><p style='padding-bottom:" +
         scrollEndHeight + "px'></p></div>");
       info.innerHTML = chapterContent.join("<span class='br'></span>");
       const winDiff = getWinDiff();
