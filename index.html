@@ -232,7 +232,7 @@
         var audioContent = getAudio(layer, props);
         if ( (props.name).includes("Alexander Clark") ) {
             selectedLayers.addLayer(layer);
-            chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.chapter + "<span class='br'></span>" +
+            chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.place + "<span class='br'></span>" +
             "</h3><span class='brmedium'></span><h3>" + props.description + "</h3>" + imgContent + vidContent + audioContent + "<span class='brmedium'></span></div>");
         }
       });
@@ -332,11 +332,11 @@
         var audioContent = getAudio(layer, props);
         if (chapterSelected[0] == props.chapter) {
           selectedLayers.addLayer(layer);
-          chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.chapter + "<span class='br'></span>" +
+          chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.place + "<span class='br'></span>" +
             "</h3><span class='brmedium'></span><h3>" + props.description + "</h3>" + imgContent + vidContent + audioContent + "<span class='brmedium'></span></div>");
         } else if (chapterSelected[0] == 0) {
           selectedLayers.addLayer(layer);
-          chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.chapter + "<span class='br'></span>" +
+          chapterContent.push("<div class='story' order='" + props.order + "' data-point='" + props.Y + "," + props.X + "'><b><h2>" + props.name + "</h2></b><span class='br'></span><h3>" + props.place + "<span class='br'></span>" +
             "</h3><span class='brmedium'></span><h3>" + props.description + "</h3>" + imgContent + vidContent + audioContent + "<span class='brmedium'></span></div>");
         } else {
           selectedLayers.removeLayer(layer);
