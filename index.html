@@ -193,6 +193,7 @@
       for (let csv = 1; csv < eachChapter.length; csv++) tmpHTML += '<option value="' + eachChapter[csv] + '">' + eachChapter[csv] + '</option>';
       tmpHTML += '</select>';
       document.getElementById("chapter-select").innerHTML = tmpHTML;
+/*     
       const paletteMap = new Map();
       for (let i = 0; i < eachChapter.length; i++) {
         var palette;
@@ -202,8 +203,29 @@
         palette = "rgb(" + r + "," + g + "," + b + ")";
         paletteMap.set(eachChapter[i], palette)
       };
+*/
       const markers = L.geoJSON(markersGeoJSON, {
         pointToLayer: function(feature, latlng) {
+          if (feature.properties.status == "s") {
+            return L.marker(latlng, {
+            icon: new L.DivIcon.SVGIcon({
+              color: '#DC143C',
+              fillColor: '#DC143C',
+              fillOpacity: 0.8,
+              iconSize: [25, 35]
+            })
+          });
+          } else {
+            return L.marker(latlng, {
+            icon: new L.DivIcon.SVGIcon({
+              color: '#87CEEB',
+              fillColor: '#87CEEB',
+              fillOpacity: 0.8,
+              iconSize: [25, 35]
+            })
+          });
+          }
+/*          
           return L.marker(latlng, {
             icon: new L.DivIcon.SVGIcon({
               color: paletteMap.get(feature.properties.chapter),
@@ -212,6 +234,7 @@
               iconSize: [25, 35]
             })
           });
+*/
         },
         onEachFeature: function(feature, layer) {
           const props = feature.properties;
