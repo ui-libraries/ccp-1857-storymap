@@ -83,6 +83,27 @@
       margin-bottom: 1em;
     }
 
+    .legend {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      font-family: Arial, sans-serif;
+      background-color: #ececdc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .legend-title {
+      font-weight: bold;
+      font-size: 14px;
+      padding-bottom: 14px;
+      text-align: center;
+    }
+
+    .legend-label {
+      padding-left: 14px;
+    }
+
     @media (max-width: 1000px) {
       .sidebar-header {
         font-size: 15px;
@@ -179,7 +200,7 @@
         maxZoom: 7
       }).addTo(map);
       L.control.scale({
-        position: "bottomright"
+        position: "bottomleft"
       }).addTo(map);
       drawMap(markersGeoJSON);
     }, 500);
@@ -451,6 +472,31 @@
       };
       return audioContent;
     };
+
+    // Define the legend control
+    var legend = L.control({ position: "bottomright" });
+
+    // Add the legend to the map
+    legend.onAdd = function (map) {
+      var div = L.DomUtil.create("div", "legend");
+      div.innerHTML += '<div class="legend-title">Map Legend</div>';
+      div.innerHTML +=
+        '<div class="legend-row"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-icon-svg" style="width:25px; height:35px;"><path class="svg-icon-path" d="M 1 12.5 L 12.5 33 L 24 12.5 A 6.25 6.25 0 0 0 1 12.5 Z" stroke-width="2" stroke="#87CEEB" stroke-opacity="1" fill="#87CEEB" fill-opacity="0.8"/><circle class="svg-icon-circle" cx="12.5" cy="12.5" r="6.25" fill="rgb(255,255,255)" fill-opacity="1" stroke="#87CEEB" stroke-opacity="1" stroke-width="2"/></svg><span class="legend-label">Free</span></div>';
+      div.innerHTML +=
+        '<div class="legend-row"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-icon-svg" style="width:25px; height:35px;"><path class="svg-icon-path" d="M 1 12.5 L 12.5 33 L 24 12.5 A 6.25 6.25 0 0 0 1 12.5 Z" stroke-width="2" stroke="#783114" stroke-opacity="1" fill="#783114" fill-opacity="0.8"/><circle class="svg-icon-circle" cx="12.5" cy="12.5" r="6.25" fill="rgb(255,255,255)" fill-opacity="1" stroke="#783114" stroke-opacity="1" stroke-width="2"/></svg><span class="legend-label">Not Free</span></div>';
+      
+        // Add CSS style to center text vertically
+      var legendRows = div.querySelectorAll('.legend-row');
+      legendRows.forEach(function(row) {
+        row.style.display = 'flex';
+        row.style.alignItems = 'center';
+      });     
+
+      return div;
+    };
+
+    legend.addTo(map);
+
   </script>
 </body>
 
