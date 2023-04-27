@@ -1255,19 +1255,19 @@ const markersGeoJSON = {
         "coordinates": ["-75.6096", "38.6401"]
       },
       "properties": {
-        "name": "Mahalia Sammons Motts, 1825-1836",
+        "name": "Mahalia Sammons, 1825-1836",
         "order": "53",
-        "chapter": "Mahalia Sammons Motts",
+        "chapter": "Mahalia Sammons Motts Lindsey",
         "X": "-75.6096",
         "Y": "38.6401",
-        "description": "Mahalia Sammons Motts was born in 1825 to free parents in Nanticoke Hundred, Delaware.",
+        "description": "Mahalia Sammons was born in 1825 to free parents in Nanticoke Hundred, Delaware.",
         "image_url": "https://github.com/jebowe3/ccp-1857-storymap/blob/main/images/Image_53_Nanticoke_DE.jpg?raw=true",
         "image_description": "",
         "video_url": "",
         "video_description": "",
         "audio_url": "",
         "audio_description": "",
-        "popup": "Mahalia Sammons Motts was born in 1825 to free parents in Nanticoke Hundred, Delaware.",
+        "popup": "Mahalia Sammons was born in 1825 to free parents in Nanticoke Hundred, Delaware.",
         "status": "f",
         "born_free": "yes",
         "place": "Nanticoke Hundred, Delaware"
@@ -1279,9 +1279,9 @@ const markersGeoJSON = {
         "coordinates": ["-91.255998", "41.21749913"]
       },
       "properties": {
-        "name": "Mahalia Sammons Motts, 1837-1848",
+        "name": "Mahalia Sammons, 1837-1848",
         "order": "54",
-        "chapter": "Mahalia Sammons Motts",
+        "chapter": "Mahalia Sammons Motts Lindsey",
         "X": "-91.255998",
         "Y": "41.21749913",
         "description": "She migrated in 1837 to Louisa County, Iowa, with two additional families of mixed-race people from Delaware and married Thomas Motts in 1848.",
@@ -1305,7 +1305,7 @@ const markersGeoJSON = {
       "properties": {
         "name": "Mahalia Sammons Motts, 1849-1865",
         "order": "55",
-        "chapter": "Mahalia Sammons Motts",
+        "chapter": "Mahalia Sammons Motts Lindsey",
         "X": "-91.0698",
         "Y": "41.42012",
         "description": "She resided in Muscatine, Iowa, until her husband's death in 1865.",

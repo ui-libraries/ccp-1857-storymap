@@ -68,6 +68,13 @@
       margin-top: 0px;
     }
 
+    h4 {
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 0px;
+      margin-top: 0px;      
+    }
+
     .br {
       display: block;
       margin-bottom: 0em;
@@ -126,6 +133,13 @@
         margin-top: 0px;
       }
 
+      h4 {
+        font-size: 11px;
+        font-weight: normal;
+        margin-bottom: 0px;
+        margin-top: 0px;      
+      }
+
       .resize {
         width: 200px;
         height: auto;
@@ -145,15 +159,26 @@
       <div class="sidebar-pane" id="home">
         <h1 class="sidebar-header">1857 Colored Convention Activists<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1><br>
         <div><br><b>
-            <h2>About This Project</h2>
-          </b><span class="br"></span>
-          <h3>SAMPLE TEXT: This map was created using <a href="https://github.com/jebowe3/CSV-2-Storymap" target="_blank">CSV-2-Storymap</a>, which takes a user input csv file and generates thematically coded markers for each entry based on the "chapter"
-            attribute in the spreadsheet. These values are then fed to the dropdown menu allowing for user filtration of the scrolling sidebar content.</h3>
+            <h2>Iowa’s Early Black Activists: Explore Their Journey to Iowa</h2>
+            <p style="padding-bottom:0px"></p>
+          <h4>
+              The Black men and women who initiated the Colored Convention movement in Iowa were among the territory and state’s earliest non-Native residents.
+              Where did Iowa’s first generation of Black activists — none of whom were actually born in Iowa — come from?
+              Were they born enslaved or free?
+              How did the enslaved gain their freedom?
+              How did their journeys and their life stories shape them into advocates for human equality and Black citizenship?
+          </h4>
           <p style="padding-bottom:0px"></p>
         </div>
         <div id="dropdown-instructions">
-          <p><b>Choose from the options in the dropdown menu to filter the results. Use the scrollbar to read through the major events of each activist's life and travels. As you scroll, the map will pan and zoom to the location connected with each event in the person's life story. While popups will open automatically as you scroll, you can also click on any of the markers to reveal content for that particular stage in the selected person's life. Popups can be closed by clicking the X in the top-right corner of the popup.</b></p>
+          <h4>This map allows you to follow the journeys of seventeen of Iowa’s earliest Black activists from their birthplace to their settlement in Iowa. <b>The dropdown menu</b> below allows you to select an individual, 
+            and <b>the scrollbar</b> just to the right allows you to follow the stages of each person’s journey to Iowa. As you scroll down, you will see on the map to the right each stop on that person’s journey. 
+            The journeys of free-born and born-enslaved people are marked differently, and some of the journeys of enslaved people are marked to show if and when they gained their freedom before they arrived in Iowa. 
+            You can follow each stop in an activist’s life as they made their way, and gain a fuller appreciation for the challenges and obstacles these pioneers encountered, and for their life-long endeavors to gain 
+            and secure their freedom under discriminatory laws and practices.</h4>
+            <p style="padding-bottom:0px"></p>
         </div>
+        <h4><b>Dropdown Menu:</b></h4><br>
         <form id="map_parameters" name="map_parameters" action="#" accept-charset="utf-8" class="inlineForm"><select id="chapter-select" class="div-toggle" data-target=".my-info-1"></select></form><span class='introbreak'></span>
         <div id="sidebar-info" class="my-info-1">
           <div id="content-info" class="contentinfo hide"></div>
@@ -291,7 +316,7 @@
       });
 */
       const scrollEndHeight = 200;
-      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see a basic template of the code that makes this map work, as well as how to generate a basic template for your own project, please go to: <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>.</h3><p style='padding-bottom:" +
+      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see the code behind this map, please go to the <a href='https://github.com/jebowe3/ccp-1857-storymap/'>1857 CCP Story Map Project</a>. The basis for this code comes from <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>, where you can generate a basic template for your own project</h3><p style='padding-bottom:" +
         scrollEndHeight + "px'></p></div>");
       info.innerHTML = chapterContent.join("<span class='br'></span>");
       const winDiff = getWinDiff();
@@ -387,7 +412,7 @@
         }
       });
       const scrollEndHeight = 200;
-      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see the code for this map, please go to: <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>.</h3><p style='padding-bottom:" +
+      chapterContent.push("<div><b><h2>See the Code</h2></b><span class='br'></span><h3>To see the code behind this map, please go to the <a href='https://github.com/jebowe3/ccp-1857-storymap/'>1857 CCP Story Map Project</a>. The basis for this code comes from <a href='https://github.com/jebowe3/CSV-2-Storymap'>CSV-2-Storymap</a>, where you can generate a basic template for your own project</h3><p style='padding-bottom:" +
         scrollEndHeight + "px'></p></div>");
       info.innerHTML = chapterContent.join("<span class='br'></span>");
       map.setView([39,-107], 5);
