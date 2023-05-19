@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-fullscreen/dist/leaflet.fullscreen.min.css" />
+
   <style>
     body {
       padding: 0;
@@ -193,6 +195,7 @@
   <script src="https://cdn.jsdelivr.net/gh/jebowe3/CSV-2-Storymap/js/svg-icon.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/jebowe3/CSV-2-Storymap/js/leaflet-sidebar.js"></script>
   <script src="js/markers.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-fullscreen/dist/Leaflet.fullscreen.min.js"></script>
   <script>
     const markerZoom = 7;
     const map = L.map("map", {
@@ -225,7 +228,7 @@
         maxZoom: 7
       }).addTo(map);
       L.control.scale({
-        position: "bottomleft"
+        position: "bottomright"
       }).addTo(map);
       drawMap(markersGeoJSON);
     }, 500);
@@ -521,6 +524,11 @@
     };
 
     legend.addTo(map);
+
+    L.control.fullscreen({
+      position: 'topright',
+      content: '&#x2192;', // Custom icon content using HTML entity
+    }).addTo(map);
 
   </script>
 </body>
