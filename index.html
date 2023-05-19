@@ -3,9 +3,12 @@
 
 <head>
   <title>1857 Colored Convention Activists</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+  <link href='dist/leaflet.fullscreen.css' rel='stylesheet' />
   <style>
     body {
       padding: 0;
@@ -32,9 +35,23 @@
       overflow: auto;
       background: #ececdc;
     }
-
+/*
     .leaflet-popup-tip, .leaflet-touch .leaflet-bar a {
       background: #ececdc;
+    }
+*/
+    .leaflet-popup-tip {
+      background: #ececdc;
+    }
+
+    .leaflet-control-zoom .leaflet-control-zoom-in,
+    .leaflet-control-zoom .leaflet-control-zoom-out {
+      background-color: #ececdc;
+    }
+
+    .leaflet-touch .leaflet-control-zoom .leaflet-control-zoom-in,
+    .leaflet-touch .leaflet-control-zoom .leaflet-control-zoom-out {
+      background-color: #ececdc;
     }
 
     .leaflet-popup {
@@ -189,12 +206,15 @@
       </div>
     </div>
   </div>
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+   crossorigin=""></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/jebowe3/CSV-2-Storymap/js/svg-icon.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/jebowe3/CSV-2-Storymap/js/leaflet-sidebar.js"></script>
   <script src="js/markers.js"></script>
+  <script src='dist/Leaflet.fullscreen.min.js'></script>
   <script>
     const markerZoom = 7;
     const map = L.map("map", {
@@ -527,6 +547,11 @@
 
     // Move the zoom control to the top-right corner
     L.control.zoom({ position: 'topright' }).addTo(map);
+
+    // Add the fullscreen button
+    map.addControl(new L.Control.Fullscreen({
+      position: 'topright'
+    }));
 
   </script>
 </body>
